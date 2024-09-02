@@ -1,0 +1,207 @@
+/* variaveis */
+:root{
+  --box-color: linear-gradient(-43deg, rgb(65, 75, 103), rgb(39, 48, 71));
+}
+/* reset */
+body,p,a,ul,li{
+  margin:0;
+  padding: 0;
+  text-decoration: none;
+}
+li{
+  list-style-type:none ;
+}
+/* estilo base */
+body {
+  background-image: linear-gradient(180deg, rgba(32, 41, 62, 1), rgba(13, 24, 52, 1));
+  font-family: "Inter-personal";
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+@font-face {
+    font-family: "Inter-personal";
+    src: url('./assets/fonts/Inter-VariableFont_slnt,wght.ttf')
+  }
+  h1,h2,h3,h4{
+    color: white;
+    font-weight: normal;
+  }
+  h1{
+    font-size: 2em;
+  }
+  h2{
+    font-size: 1em;
+  }
+
+/* mobile styles */
+#intro_block{
+  visibility: visible;
+  display: grid;
+  grid-row: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 5.5vw;
+  border-radius: 6px;
+  background-image: var(--box-color);
+}
+#desktop{   
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0);
+}
+#img_perfil{
+  visibility: visible;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  margin: 3.3vw 0vw 0vw 3vw;
+  max-height: 25vw;
+  max-width: 25vw;
+  border-radius: 6px;
+}
+#text{
+  visibility: visible;
+  color: white;
+  font-size: 4.3vw;
+  margin: 3.1vw;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+}
+#welcoming_title{
+  visibility: visible;
+  text-align: center;
+  height: 10vw;
+}
+#welcoming_title h2{
+  visibility: visible;
+  margin-top: 9vw;
+  font-size: 2.4vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  font-weight: 300;
+}
+#welcoming_title h1{
+  visibility: visible;
+  margin-top: 0.1vh;
+  font-size: 5.4vw;
+}
+.icon{
+  visibility: visible;
+  margin-left: 10px;
+}
+#buttons{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  text-align: center;
+}
+.buttons{
+  visibility: visible;
+  border-style: none;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1vw;
+  color: #A6BFFF;
+  background-color: #465375;
+  padding-top:0.3vw;
+  padding-bottom:0.3vw;
+  font-weight: 400;
+}
+/* Aplicando a responsividade do site */
+
+/* small tablet styles*/
+@media screen and (min-width:472px){
+  #text{
+    font-size: 4vw;
+  }
+}
+/* large tablets & laptop styles*/
+@media screen and (min-width:518px){
+  #text{
+    font-size: 3.8vw;
+  }
+}
+/* larger tablets*/
+@media screen and (min-width:560px){
+  #text{
+    font-size: calc(.5em + 2.1vw);
+  }
+  #img_perfil{
+    width: 22vw;
+  }
+  #welcoming_title h2{
+    margin-top: 9vw;
+    font-size: calc(.5em + 1.3vw);
+  }
+  #welcoming_title h1{
+    margin-top: 0.1vh;
+    font-size: calc(.5em + 4.3vw);
+  }
+  #icons img{
+    max-width: 55px;
+  }
+  #goback_button{
+  font-size: calc(.5em + 3.3vw);
+  }
+}
+/* desktop styles*/
+@media screen and (min-width:1200px){
+  #intro_block{
+    margin: 2vw 7vw 2vw 7vw;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+  }
+  #img_perfil{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    max-width: 14vw;
+    margin: 6vw 0 0 0;
+    justify-self: center;
+  }
+  #text{
+    font-size: calc(.5em + 1.1vw);
+    margin-bottom: 2vw;
+    margin-top: 0px;
+    margin-left: 1.6vw;
+    margin-right: 1.6vw;
+  }
+  #welcoming_title{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+  }
+  #welcoming_title h2{
+  margin: 1vw 0 0 0;
+  }
+  #welcoming_title h1{
+    margin-top: 15vw;
+    margin-bottom: 0px;
+    font-size: 3vw;
+  }
+  #desktop{
+    display: grid;
+    visibility: visible;
+    background-image: linear-gradient(180deg, rgba(60, 58, 101, 0.126), rgba(170, 168, 200, 0.075));
+    margin: 0vw 13vw 0vw 13vw;
+    height: 100%;
+  }
+  .buttons{
+    align-self: flex-end;
+    visibility: visible;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    font-size: 1vw;
+    background-color: rgb(89, 105, 147);
+    margin: 2vw 0.8vh 1vh 2vw;
+    height: 3vh;
+    padding-top:0.2vw;
+    padding-bottom: 0px;
+  }
+
+}
+
